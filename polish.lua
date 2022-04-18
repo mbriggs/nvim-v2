@@ -37,14 +37,6 @@ return function()
 	set.relativenumber = false
 
 	-- Set autocommands
-	vim.api.nvim_create_augroup("packer_conf", {})
-	vim.api.nvim_create_autocmd("BufWritePost", {
-		desc = "Sync packer after modifying plugins.lua",
-		group = "packer_conf",
-		pattern = "*lua/user/plugins/init.lua",
-		command = "source <afile> | PackerSync",
-	})
-
 	vim.api.nvim_create_augroup("userft", {})
 	vim.api.nvim_create_autocmd("BufRead", {
 		desc = "set gohtml to html",
