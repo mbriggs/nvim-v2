@@ -9,9 +9,6 @@ return function(client, bufnr)
 		end,
 	})
 
-	vim.diagnostic.config({
-		virtual_text = false,
-	})
 	-- vim.api.nvim_create_autocmd("CursorHoldI", {
 	-- 	desc = "show diagnostic on pause in insert",
 	-- 	group = "userlsp",
