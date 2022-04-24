@@ -3,6 +3,7 @@ return function()
 	local set = vim.opt
 	-- Set options
 	set.relativenumber = true
+	set.wrap = true
 
 	-- Set key bindings
 	map("n", "<C-s>", ":w!<CR>")
@@ -14,11 +15,26 @@ return function()
 
 	map("n", "\\", ":NvimTreeToggle<cr>")
 
-	map("n", "<c-l>", ":BufferLineCycleNext<cr>")
-	map("n", "<c-h>", ":BufferLineCyclePrev<cr>")
-
 	-- put current dir into command
 	map("c", "%%", "<C-R>=expand('%:h').'/'<cr>")
+
+	-- scroll
+	map("n", "K", "<c-y>")
+	map("n", "J", "<c-e>")
+
+	-- resize
+	map("n", "<C-k>", function()
+		require("smart-splits").resize_up()
+	end)
+	map("n", "<C-j>", function()
+		require("smart-splits").resize_down()
+	end)
+	map("n", "<C-h>", function()
+		require("smart-splits").resize_left()
+	end)
+	map("n", "<C-l>", function()
+		require("smart-splits").resize_right()
+	end)
 
 	--tmux
 	map("n", "<c-w>h", function()
