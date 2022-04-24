@@ -246,21 +246,6 @@ local fix = {
 		},
 		ft = "qf",
 	},
-
-	{
-		"folke/lsp-trouble.nvim",
-		requires = "kyazdani42/nvim-web-devicons",
-		config = function()
-			require("trouble").setup({})
-		end,
-		cmd = "TroubleToggle",
-	},
-	{
-		"Mofiqul/trld.nvim",
-		config = function()
-			require("trld").setup()
-		end,
-	},
 }
 
 local lsp = {
@@ -277,6 +262,14 @@ local lsp = {
 			{ "nvim-lua/plenary.nvim" },
 			{ "nvim-treesitter/nvim-treesitter" },
 		},
+	},
+	{
+		"folke/lsp-trouble.nvim",
+		requires = "kyazdani42/nvim-web-devicons",
+		config = function()
+			require("trouble").setup({})
+		end,
+		cmd = "TroubleToggle",
 	},
 }
 
