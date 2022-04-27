@@ -16,6 +16,9 @@ return function()
 	-- put current dir into command
 	map("c", "%%", "<C-R>=expand('%:h').'/'<cr>")
 
+	-- go to previous buffer
+	map("n", "-", "<c-^>")
+
 	-- resize
 	map("n", "<C-k>", function()
 		require("smart-splits").resize_up()
