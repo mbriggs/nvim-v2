@@ -109,16 +109,24 @@ local objects = {
 -- Tools --
 -- add tools to nvim
 local tools = {
+	-- generate links to github
 	{
 		"ruifm/gitlinker.nvim",
 		event = "BufRead",
 		config = require("user.plugins.gitlinker"),
 		requires = "nvim-lua/plenary.nvim",
 	},
+	-- run tests
 	{
 		"janko/vim-test",
 		requires = "preservim/vimux",
 		config = [[vim.g['test#strategy'] = 'vimux']],
+	},
+	-- search & replace panel
+	{
+		"windwp/nvim-spectre",
+		requires = "nvim-lua/plenary.nvim",
+		config = require("user.plugins.spectre"),
 	},
 }
 
