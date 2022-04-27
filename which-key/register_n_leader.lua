@@ -31,11 +31,10 @@ end
 -- Normal Mode <leader> Mappings
 local Nmappings = {
 	[":"] = { [[<cmd>lua require("user.lsp_fixcurrent")()<cr>]], "QuickFix" },
-	["<space>"] = { [[<cmd>Telescope oldfiles<cr>]], "Find Old File" },
 	["<cr>"] = { [[<cmd>q<cr>]], "Close Window" },
 	["-"] = { [[<cmd>only<cr>]], "Close other splits" },
 	["'"] = { [[<cmd>vs<cr>]], "Split" },
-	[","] = { [[<cmd>sp<cr>]], "Horizontal Split" },
+	['"'] = { [[<cmd>sp<cr>]], "Horizontal Split" },
 	["."] = { [[<cmd>Telescope lsp_definitions<cr>]], "Go to Definition" },
 	[">"] = { [[<cmd>Telescope lsp_references<cr>]], "Go to other references" },
 

@@ -13,14 +13,8 @@ return function()
 	map("n", "<s-h>", "^")
 	map("n", "<s-l>", "$")
 
-	map("n", "\\", ":NvimTreeToggle<cr>")
-
 	-- put current dir into command
 	map("c", "%%", "<C-R>=expand('%:h').'/'<cr>")
-
-	-- scroll
-	map("n", "K", "<c-y>")
-	map("n", "J", "<c-e>")
 
 	-- resize
 	map("n", "<C-k>", function()
@@ -72,4 +66,7 @@ return function()
 		pattern = "*.go",
 		command = "setlocal noet ts=4 sw=4 sts=4",
 	})
+
+	local load_all = require("user.load_all")
+	load_all(os.getenv("HOME") .. "/.config/nvim/lua/user/ft")
 end
