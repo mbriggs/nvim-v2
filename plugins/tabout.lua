@@ -24,9 +24,7 @@ return function()
 	end
 
 	function _G.tab_binding()
-		if require("cmp").visible() then
-			return replace_keycodes("<C-n>")
-		elseif require("luasnip").expand_or_jumpable() then
+		if require("luasnip").expand_or_jumpable() then
 			return replace_keycodes("<Plug>(luasnip-expand-or-jump)")
 		else
 			return replace_keycodes("<Plug>(Tabout)")
@@ -34,9 +32,7 @@ return function()
 	end
 
 	function _G.s_tab_binding()
-		if require("cmp").visible() then
-			return replace_keycodes("<C-p>")
-		elseif require("luasnip").jumpable(-1) then
+		if require("luasnip").jumpable(-1) then
 			return replace_keycodes("<Plug>(luasnip-jump-prev)")
 		else
 			return replace_keycodes("<Plug>(TaboutBack)")
