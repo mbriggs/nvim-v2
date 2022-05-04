@@ -19,11 +19,6 @@ local core = {
 	{ "lambdalisue/suda.vim" },
 	-- utility mappings
 	{ "tpope/vim-unimpaired" },
-	-- movement
-	{
-		"ggandor/leap.nvim",
-		config = require("user.plugins.leap"),
-	},
 }
 
 -- Fix --
@@ -135,6 +130,8 @@ return function(plugins)
 
 	-- Disabled Default Plugins
 	plugins["glepnir/dashboard-nvim"] = nil
+	plugins["goolord/alpha-nvim"] = nil
+	plugins["Shatur/neovim-session-manager"] = nil
 	plugins["max397574/better-escape.nvim"] = nil
 	plugins["akinsho/bufferline.nvim"] = nil
 	plugins["p00f/nvim-ts-rainbow"] = nil
