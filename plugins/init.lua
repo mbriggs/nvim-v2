@@ -19,6 +19,8 @@ local core = {
 	{ "lambdalisue/suda.vim" },
 	-- utility mappings
 	{ "tpope/vim-unimpaired" },
+	-- buffer nav
+	{ "ghillb/cybu.nvim", requires = { "kyazdani42/nvim-web-devicons" }, config = require("user.plugins.cybu") },
 }
 
 -- Fix --
@@ -126,11 +128,11 @@ local tools = {
 }
 
 local function label(plugins)
-  local labelled = {}
-  for _, plugin in ipairs(plugins) do
-    labelled[plugin[1]] = plugin
-  end
-  return labelled
+	local labelled = {}
+	for _, plugin in ipairs(plugins) do
+		labelled[plugin[1]] = plugin
+	end
+	return labelled
 end
 
 return function(plugins)
