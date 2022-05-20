@@ -125,9 +125,15 @@ local tools = {
 	},
 }
 
-return function(plugins)
-	local label = require("core.utils").label_plugins
+local function label(plugins)
+  local labelled = {}
+  for _, plugin in ipairs(plugins) do
+    labelled[plugin[1]] = plugin
+  end
+  return labelled
+end
 
+return function(plugins)
 	-- Disabled Default Plugins
 	plugins["glepnir/dashboard-nvim"] = nil
 	plugins["goolord/alpha-nvim"] = nil
