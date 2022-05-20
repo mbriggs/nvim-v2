@@ -180,7 +180,18 @@ local Nmappings = {
 		r = { "<cmd>Telescope registers<cr>", "Registers" },
 		t = { "<cmd>Telescope colorscheme<cr>", "Themes" },
 		w = { "<cmd>Telescope live_grep<cr>", "Words" },
-		o = { nil },
+		o = {
+			function()
+				require("telescope.builtin").find_files({ cwd = vim.fn.expand("%:p:h") })
+			end,
+			"Other file",
+		},
+		d = {
+			function()
+				require("telescope.builtin").find_files({ cwd = vim.fn.expand("%:p:h") })
+			end,
+			"Words in directory",
+		},
 	},
 
 	d = {
