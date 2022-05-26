@@ -19,8 +19,6 @@ local core = {
 	{ "lambdalisue/suda.vim" },
 	-- utility mappings
 	{ "tpope/vim-unimpaired" },
-	-- buffer nav
-	{ "ghillb/cybu.nvim", requires = { "kyazdani42/nvim-web-devicons" }, config = require("user.plugins.cybu") },
 }
 
 -- Fix --
