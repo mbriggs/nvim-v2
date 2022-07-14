@@ -1,0 +1,7 @@
+return {
+	window = {
+		mappings = {
+			["/"] = "none",
+		},
+	},
+}
