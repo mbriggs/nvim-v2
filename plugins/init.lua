@@ -19,6 +19,8 @@ local core = {
 	{ "lambdalisue/suda.vim" },
 	-- utility mappings
 	{ "tpope/vim-unimpaired" },
+	-- highlight unique chars
+	{ "jinh0/eyeliner.nvim" },
 }
 
 -- Fix --
@@ -142,15 +144,8 @@ return function(plugins)
 	plugins["akinsho/bufferline.nvim"] = nil
 	plugins["p00f/nvim-ts-rainbow"] = nil
 
-	local combined = vim.tbl_deep_extend(
-		"force",
-		plugins,
-		label(core),
-		label(tools),
-		label(fix),
-		label(lsp),
-		label(objects)
-	)
+	local combined =
+		vim.tbl_deep_extend("force", plugins, label(core), label(tools), label(fix), label(lsp), label(objects))
 
 	return combined
 end
