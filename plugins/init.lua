@@ -45,7 +45,10 @@ local fix = {
 	-- support . for more things
 	{ "tpope/vim-repeat" },
 	-- work on delims
-	{ "tpope/vim-surround" },
+	{
+		"kylechui/nvim-surround",
+		config = require("user.plugins.surround"),
+	},
 	-- do not jump on star
 	{
 		"ironhouzi/starlite-nvim",
@@ -101,6 +104,8 @@ local objects = {
 	{ "rhysd/vim-textobj-anyblock" },
 	-- space = operate on segment
 	{ "chaoren/vim-wordmotion", setup = [[vim.g.wordmotion_prefix = '<space>']] },
+	-- gs = sort
+	{ "ralismark/opsort.vim" },
 }
 
 -- Tools --
