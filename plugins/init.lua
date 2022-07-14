@@ -38,12 +38,6 @@ local fix = {
 		requires = "nvim-lua/plenary.nvim",
 		config = require("user.plugins.todo-comments"),
 	},
-	-- tab out of delimiters
-	{
-		"abecodes/tabout.nvim",
-		config = require("user.plugins.tabout"),
-		wants = { "nvim-treesitter" },
-	},
 	-- open files over ssh
 	{ "lambdalisue/vim-protocol" },
 	-- highlight yanks
