@@ -31,6 +31,7 @@ end
 -- Normal Mode <leader> Mappings
 local Nmappings = {
 	[":"] = { [[<cmd>lua require("user.lsp_fixcurrent")()<cr>]], "QuickFix" },
+	[";"] = { "<cmd>Telescope find_files<cr>", "Files" },
 	["<cr>"] = { [[<cmd>q<cr>]], "Close Window" },
 	["-"] = { [[<cmd>only<cr>]], "Close other splits" },
 	["'"] = { [[<cmd>vs<cr>]], "Split" },
