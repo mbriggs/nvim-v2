@@ -26,6 +26,12 @@ local core = {
 		"catppuccin/nvim",
 		as = "catppuccin",
 		config = require("user.plugins.catppuccin"),
+		run = ":CatppuccinCompile",
+	},
+	-- jump in buffer
+	{
+		"phaazon/hop.nvim",
+		config = require("user.plugins.hop"),
 	},
 }
 
