@@ -17,6 +17,7 @@ return {
 		formatting.shfmt,
 		formatting.sqlformat,
 		formatting.stylua,
+		formatting.rubocop,
 
 		diagnostics.shellcheck,
 		diagnostics.codespell,
@@ -29,9 +30,9 @@ return {
 		code_actions.shellcheck,
 		code_actions.refactoring,
 	},
+
 	-- NOTE: You can remove this on attach function to disable format on save
 	on_attach = function(client)
-		print("save")
 		if client.server_capabilities.documentFormattingProvider then
 			vim.api.nvim_create_autocmd("BufWritePre", {
 				desc = "Auto format before save",
