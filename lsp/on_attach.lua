@@ -1,6 +1,6 @@
 return function(client, bufnr)
 	-- dont use main LSP for formatting, use null-ls
-	client.server_capabilities.document_formatting = false
+	client.resolved_capabilities.document_formatting = false
 	client.server_capabilities.documentFormattingProvider = false
 	client.server_capabilities.documentRangeFormattingProvider = false
 
