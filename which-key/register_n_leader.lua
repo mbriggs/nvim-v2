@@ -3,20 +3,6 @@ if not status_ok then
 	return
 end
 
-local function vim_opt_toggle(opt, on, off, name)
-	return function()
-		local message = name
-		if vim.opt[opt]._value == off then
-			vim.opt[opt] = on
-			message = message .. " Enabled"
-		else
-			vim.opt[opt] = off
-			message = message .. " Disabled"
-		end
-		vim.notify(message, "info", require("core.utils").base_notification)
-	end
-end
-
 local function opts(mode, prefix)
 	return {
 		mode = mode,
@@ -38,6 +24,10 @@ local Nmappings = {
 	['"'] = { [[<cmd>sp<cr>]], "Horizontal Split" },
 	["."] = { [[<cmd>Telescope lsp_definitions<cr>]], "Go to Definition" },
 	[">"] = { [[<cmd>Telescope lsp_references<cr>]], "Go to other references" },
+	["/"] = {
+		require("lsp_lines").toggle,
+		"Toggle Diagnostics",
+	},
 
 	h = { nil },
 	c = { nil },
