@@ -95,10 +95,6 @@ local lsp = {
 		config = require("user.plugins.trouble"),
 		cmd = "TroubleToggle",
 	},
-	{
-		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-		config = require("user.plugins.lsp_lines"),
-	},
 }
 
 -- Objects --
@@ -159,15 +155,8 @@ return function(plugins)
 	plugins["akinsho/bufferline.nvim"] = nil
 	plugins["p00f/nvim-ts-rainbow"] = nil
 
-	local combined = vim.tbl_deep_extend(
-		"force",
-		plugins,
-		label(core),
-		label(tools),
-		label(fix),
-		label(lsp),
-		label(objects)
-	)
+	local combined =
+		vim.tbl_deep_extend("force", plugins, label(core), label(tools), label(fix), label(lsp), label(objects))
 
 	return combined
 end
