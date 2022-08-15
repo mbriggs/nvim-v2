@@ -130,6 +130,12 @@ local tools = {
 		requires = "preservim/vimux",
 		config = [[vim.g['test#strategy'] = 'vimux']],
 	},
+	-- with code coverage
+	{
+		"andythigpen/nvim-coverage",
+		requires = "nvim-lua/plenary.nvim",
+		config = require("user.plugins.coverage"),
+	},
 	-- search & replace panel
 	{
 		"windwp/nvim-spectre",
