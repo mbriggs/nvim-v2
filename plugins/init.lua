@@ -124,6 +124,16 @@ local tools = {
 		config = require("user.plugins.gitlinker"),
 		requires = "nvim-lua/plenary.nvim",
 	},
+
+	-- go tooling
+	{
+		"olexsmir/gopher.nvim",
+		requires = { -- dependencies
+			"nvim-lua/plenary.nvim",
+			"nvim-treesitter/nvim-treesitter",
+		},
+		config = require("user.plugins.gopher"),
+	},
 	-- run tests
 	{
 		"janko/vim-test",
