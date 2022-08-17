@@ -171,8 +171,15 @@ return function(plugins)
 	plugins["akinsho/bufferline.nvim"] = nil
 	plugins["p00f/nvim-ts-rainbow"] = nil
 
-	local combined =
-		vim.tbl_deep_extend("force", plugins, label(core), label(tools), label(fix), label(lsp), label(objects))
+	local combined = vim.tbl_deep_extend(
+		"force",
+		plugins,
+		label(core),
+		label(tools),
+		label(fix),
+		label(lsp),
+		label(objects)
+	)
 
 	return combined
 end
