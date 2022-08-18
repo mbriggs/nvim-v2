@@ -14,6 +14,15 @@ local function opts(mode, prefix)
 	}
 end
 
+local function toggleLines()
+	local new_value = not vim.diagnostic.config().virtual_lines
+	vim.diagnostic.config({
+		virtual_lines = new_value,
+		virtual_text = not new_value,
+	})
+	return new_value
+end
+
 -- Normal Mode <leader> Mappings
 local Nmappings = {
 	[":"] = { [[<cmd>lua require("user.lsp_fixcurrent")()<cr>]], "QuickFix" },
@@ -25,7 +34,7 @@ local Nmappings = {
 	["."] = { [[<cmd>Telescope lsp_definitions<cr>]], "Go to Definition" },
 	[">"] = { [[<cmd>Telescope lsp_references<cr>]], "Go to other references" },
 	["/"] = {
-		require("lsp_lines").toggle,
+		toggleLines,
 		"Toggle Diagnostics",
 	},
 
