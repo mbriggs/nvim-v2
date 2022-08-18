@@ -95,6 +95,10 @@ local lsp = {
 		config = require("user.plugins.trouble"),
 		cmd = "TroubleToggle",
 	},
+	{
+		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+		config = require("user.plugins.lsp_lines"),
+	},
 }
 
 -- Objects --

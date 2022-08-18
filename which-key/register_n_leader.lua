@@ -24,6 +24,10 @@ local Nmappings = {
 	['"'] = { [[<cmd>sp<cr>]], "Horizontal Split" },
 	["."] = { [[<cmd>Telescope lsp_definitions<cr>]], "Go to Definition" },
 	[">"] = { [[<cmd>Telescope lsp_references<cr>]], "Go to other references" },
+	["/"] = {
+		require("lsp_lines").toggle,
+		"Toggle Diagnostics",
+	},
 
 	h = { nil },
 	c = { nil },
