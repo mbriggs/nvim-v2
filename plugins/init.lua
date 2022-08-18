@@ -102,8 +102,6 @@ local lsp = {
 local objects = {
 	-- custom text objects
 	{ "kana/vim-textobj-user" },
-	-- c == comment
-	{ "glts/vim-textobj-comment" },
 	-- e = entire buffer
 	{ "kana/vim-textobj-entire" },
 	-- b == many things
@@ -112,6 +110,11 @@ local objects = {
 	{ "chaoren/vim-wordmotion", setup = [[vim.g.wordmotion_prefix = '<space>']] },
 	-- gs = sort
 	{ "ralismark/opsort.vim" },
+	-- many things
+	{
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		requires = "nvim-treesitter/nvim-treesitter",
+	},
 }
 
 -- Tools --
@@ -167,7 +170,6 @@ return function(plugins)
 	plugins["glepnir/dashboard-nvim"] = nil
 	plugins["goolord/alpha-nvim"] = nil
 	plugins["Shatur/neovim-session-manager"] = nil
-	plugins["max397574/better-escape.nvim"] = nil
 	plugins["akinsho/bufferline.nvim"] = nil
 	plugins["p00f/nvim-ts-rainbow"] = nil
 
