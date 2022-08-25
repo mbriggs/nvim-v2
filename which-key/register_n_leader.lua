@@ -38,6 +38,10 @@ local Nmappings = {
 		"Toggle Diagnostics",
 	},
 
+	g = {
+		C = { [[<cmd>Telescope git_bcommits<cr>]], "Buffer Commits" },
+	},
+
 	h = { nil },
 	c = { nil },
 	w = { nil },
