@@ -38,13 +38,23 @@ local Nmappings = {
 		"Toggle Diagnostics",
 	},
 
+	w = {
+		function()
+			local winid = require("winpick").select()
+
+			if winid then
+				vim.api.nvim_set_current_win(winid)
+			end
+		end,
+		"Pick Window",
+	},
+
 	g = {
 		C = { [[<cmd>Telescope git_bcommits<cr>]], "Buffer Commits" },
 	},
 
 	h = { nil },
 	c = { nil },
-	w = { nil },
 
 	["E"] = {
 		name = "+Editor",
