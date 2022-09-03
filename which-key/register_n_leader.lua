@@ -64,6 +64,7 @@ local Nmappings = {
 		c = { [[<cmd>Telescope command_history<cr>]], "Previous Commands" },
 		k = { [[<cmd>Telescope keymaps<cr>]], "Keymap" },
 		w = { "<cmd>WinShift<cr>", "Move Window" },
+		a = { [[<cmd>AstroUpdate<cr>]], "Astro Update" },
 		u = {
 			name = "+Sudo",
 			r = { "<cmd>SudaRead<cr>", "Read file with sudo" },
