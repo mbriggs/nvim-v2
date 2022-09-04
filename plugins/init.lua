@@ -18,6 +18,8 @@ local core = {
 	},
 	-- open file
 	{ "justinmk/vim-gtfo" },
+	-- correct typos on file open from cli
+	{ "mong8se/actually.nvim" },
 	-- casing aware search and replace
 	{ "lambdalisue/reword.vim" },
 	-- reload file with sudo
@@ -49,6 +51,12 @@ local fix = {
 		requires = "nvim-lua/plenary.nvim",
 		config = require("user.plugins.todo-comments"),
 	},
+	-- tint inactive windows
+	-- TODO: uncomment when 0.8.0 lands
+	-- {
+	-- 	"levouh/tint.nvim",
+	-- 	config = require("user.plugins.tint"),
+	-- },
 	-- open files over ssh
 	{ "lambdalisue/vim-protocol" },
 	-- highlight yanks
@@ -182,15 +190,8 @@ return function(plugins)
 	plugins["akinsho/bufferline.nvim"] = nil
 	plugins["p00f/nvim-ts-rainbow"] = nil
 
-	local combined = vim.tbl_deep_extend(
-		"force",
-		plugins,
-		label(core),
-		label(tools),
-		label(fix),
-		label(lsp),
-		label(objects)
-	)
+	local combined =
+		vim.tbl_deep_extend("force", plugins, label(core), label(tools), label(fix), label(lsp), label(objects))
 
 	return combined
 end
