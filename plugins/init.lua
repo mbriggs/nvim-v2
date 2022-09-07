@@ -171,12 +171,19 @@ local tools = {
 -- Clojure --
 -- clojure specific stuff
 local clj = {
+	-- connect repl to editor
 	{ "Olical/conjure" },
-	{ "tpope/vim-dispatch" },
-	{ "radenling/vim-dispatch-neovim" },
-	{ "clojure-vim/vim-jack-in" },
-	{ "guns/vim-sexp" },
-	{ "tpope/vim-sexp-mappings-for-regular-people" },
+	-- infer paren balancing
+	{ "eraserhd/parinfer-rust", run = "CARGO_NET_GIT_FETCH_WITH_CLI=true cargo build --release" },
+	-- ability to start nrepl from inside vim
+	{
+		"clojure-vim/vim-jack-in",
+		requires = {
+			{ "radenling/vim-dispatch-neovim", requires = { { "tpope/vim-dispatch" } } },
+		},
+	},
+	-- structural editing
+	{ "guns/vim-sexp", requires = { { "tpope/vim-sexp-mappings-for-regular-people" } } },
 }
 
 local function label(plugins)
