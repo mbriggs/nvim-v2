@@ -19,6 +19,7 @@ clojure:
 
 
 dependencies:
+	brew install rust
 	brew install borkdude/brew/clj-kondo
 	brew install --cask cljstyle
 	brew install ripgrep
