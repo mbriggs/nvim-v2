@@ -19,6 +19,7 @@ return {
 		formatting.stylua,
 		formatting.cljstyle,
 		formatting.rubocop,
+		formatting.mix,
 
 		diagnostics.shellcheck,
 		diagnostics.codespell,
