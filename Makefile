@@ -12,7 +12,15 @@ clean:
 
 install: clean clone link
 
+# todo move me
+clojure:
+	brew install clojure/tools/clojure
+	clojure -Ttools install io.github.seancorfield/deps-new '{:git/tag "v0.4.13"}' :as new
+
+
 dependencies:
+	brew install borkdude/brew/clj-kondo
+	brew install --cask cljstyle
 	brew install ripgrep
 	brew install nnn
 	brew install codespell

@@ -52,6 +52,12 @@ return function()
 	-- Set autocommands
 	vim.api.nvim_create_augroup("userft", {})
 	vim.api.nvim_create_autocmd("BufRead", {
+		desc = "set edn to clojure",
+		group = "userft",
+		pattern = "*.edn",
+		command = "set ft=clojure",
+	})
+	vim.api.nvim_create_autocmd("BufRead", {
 		desc = "set gohtml to html",
 		group = "userft",
 		pattern = "*.gohtml",

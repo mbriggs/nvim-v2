@@ -174,6 +174,17 @@ local tools = {
 	},
 }
 
+-- Clojure --
+-- clojure specific stuff
+local clj = {
+	{ "Olical/conjure" },
+	{ "tpope/vim-dispatch" },
+	{ "radenling/vim-dispatch-neovim" },
+	{ "clojure-vim/vim-jack-in" },
+	{ "guns/vim-sexp" },
+	{ "tpope/vim-sexp-mappings-for-regular-people" },
+}
+
 local function label(plugins)
 	local labelled = {}
 	for _, plugin in ipairs(plugins) do
@@ -190,8 +201,16 @@ return function(plugins)
 	plugins["akinsho/bufferline.nvim"] = nil
 	plugins["p00f/nvim-ts-rainbow"] = nil
 
-	local combined =
-		vim.tbl_deep_extend("force", plugins, label(core), label(tools), label(fix), label(lsp), label(objects))
+	local combined = vim.tbl_deep_extend(
+		"force",
+		plugins,
+		label(core),
+		label(tools),
+		label(fix),
+		label(lsp),
+		label(objects),
+		label(clj)
+	)
 
 	return combined
 end
