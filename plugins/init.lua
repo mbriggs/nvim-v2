@@ -171,10 +171,12 @@ local tools = {
 -- Clojure --
 -- clojure specific stuff
 local clj = {
-	-- connect repl to editor
 	{ "Olical/conjure" },
-	-- infer paren balancing
-	{ "eraserhd/parinfer-rust", run = "CARGO_NET_GIT_FETCH_WITH_CLI=true cargo build --release" },
+	{ "tpope/vim-dispatch" },
+	{ "radenling/vim-dispatch-neovim" },
+	{ "clojure-vim/vim-jack-in" },
+	{ "guns/vim-sexp" },
+	{ "tpope/vim-sexp-mappings-for-regular-people" },
 }
 
 local function label(plugins)
