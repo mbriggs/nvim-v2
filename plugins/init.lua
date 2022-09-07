@@ -117,12 +117,6 @@ local lsp = {
 -- Objects --
 -- custom text objects
 local objects = {
-	-- custom text objects
-	{ "kana/vim-textobj-user" },
-	-- e = entire buffer
-	{ "kana/vim-textobj-entire" },
-	-- b == many things
-	{ "rhysd/vim-textobj-anyblock" },
 	-- space = operate on segment
 	{ "chaoren/vim-wordmotion", setup = [[vim.g.wordmotion_prefix = '<space>']] },
 	-- gs = sort
