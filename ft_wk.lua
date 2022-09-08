@@ -10,7 +10,7 @@ function SetWKBuffer()
 
 	if map ~= nil then
 		map["name"] = "+Local"
-		wk.register({ ["<space>"] = map }, opts)
+		wk.register({ [","] = map }, opts)
 	end
 end
 
