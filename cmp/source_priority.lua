@@ -1,6 +1,6 @@
 return {
 	nvim_lsp = 1000,
-	luasnip = false,
+	luasnip = 600,
 	buffer = 500,
 	path = 250,
 }

@@ -23,7 +23,6 @@ dependencies:
 	brew install borkdude/brew/clj-kondo
 	brew install --cask cljstyle
 	brew install ripgrep
-	brew install nnn
 	brew install codespell
 	brew install shfmt
 	brew install sqlparse

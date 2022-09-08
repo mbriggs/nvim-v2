@@ -49,6 +49,11 @@ return function()
 
 	set.relativenumber = false
 
+	-- snippets
+	require("luasnip/loaders/from_snipmate").lazy_load({
+		paths = { "./lua/user/snippets" },
+	})
+
 	-- Set autocommands
 	vim.api.nvim_create_augroup("userft", {})
 	vim.api.nvim_create_autocmd("BufRead", {
