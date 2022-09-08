@@ -2,6 +2,7 @@ local actions = require("telescope.actions")
 
 return {
 	defaults = {
+		file_ignore_patterns = { "vendor" },
 		mappings = {
 			i = {
 				["<C-n>"] = actions.move_selection_next,
