@@ -28,6 +28,8 @@ local core = {
 	{ "tpope/vim-unimpaired" },
 	-- highlight unique chars
 	{ "jinh0/eyeliner.nvim" },
+	-- zoom pane with <C-w>m
+	{ "dhruvasagar/vim-zoom" },
 	-- colors
 	{
 		"catppuccin/nvim",
