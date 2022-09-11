@@ -23,7 +23,6 @@ return {
 
 		diagnostics.shellcheck,
 		diagnostics.codespell,
-		diagnostics.clj_kondo,
 		diagnostics.eslint_d,
 		diagnostics.hadolint,
 		diagnostics.proselint,
