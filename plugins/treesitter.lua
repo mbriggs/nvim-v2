@@ -1,6 +1,14 @@
 return {
 	auto_install = true,
 	sync_install = true,
+	incremental_selection = {
+		enable = true,
+		keymap = {
+			init_selection = "gnn",
+			node_incremental = "grn",
+			node_decremental = "grm",
+		},
+	},
 	textobjects = {
 		select = {
 			enable = true,
@@ -33,8 +41,6 @@ return {
 			enable = true,
 			swap_next = {
 				["<leader>a"] = "@parameter.inner",
-			},
-			swap_previous = {
 				["<leader>A"] = "@parameter.inner",
 			},
 		},

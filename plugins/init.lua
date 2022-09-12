@@ -37,6 +37,10 @@ local core = {
 		config = require("user.plugins.catppuccin"),
 		run = ":CatppuccinCompile",
 	},
+	{
+		"katawful/kat.nvim",
+		tag = "1.0",
+	},
 	-- jump in buffer
 	{
 		"phaazon/hop.nvim",
