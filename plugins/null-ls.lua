@@ -15,6 +15,7 @@ return {
 		formatting.prettierd,
 		formatting.cmake_format,
 		formatting.shfmt,
+		formatting.goimports,
 		formatting.sqlformat,
 		formatting.stylua,
 		formatting.cljstyle,
