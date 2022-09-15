@@ -1,39 +1,28 @@
 clone:
 	git clone https://github.com/AstroNvim/AstroNvim.git $$HOME/.config/nvim
 
-link:
-	ln -s $$HOME/nvim $$HOME/.config/nvim/lua/user
-
 clean:
 	rm -rf $$HOME/.cache/nvim
 	rm -rf $$HOME/.local/share/nvim
-	rm -rf $$HOME/.local/share/lunarvim
+	rm -rf $$HOME/.local/state/nvim
 	rm -rf $$HOME/.config/nvim
 
-install: clean clone link
-
-# todo move me
-clojure:
-	brew install clojure/tools/clojure
-	clojure -Ttools install io.github.seancorfield/deps-new '{:git/tag "v0.4.13"}' :as new
-
-
 dependencies:
-	brew install rust
-	brew install borkdude/brew/clj-kondo
-	brew install --cask cljstyle
-	brew install ripgrep
-	brew install codespell
-	brew install shfmt
-	brew install sqlparse
-	brew install shellcheck
-	brew install stylua
-	brew install hadolint
-	pip3 install cmakelang
-	npm i -g prettier
-	npm i -g lua-fmt
-	npm i -g eslint_d
-	npm install -g @fsouza/prettierd
-	npm install -g @unibeautify/beautifier-sqlformat
-	npm install -g stylelint
-	gem install rubocop rubocop-rails
+	brew install rust || exit 1
+	brew install borkdude/brew/clj-kondo || exit 1
+	brew install --cask cljstyle || exit 1
+	brew install ripgrep || exit 1
+	brew install codespell || exit 1
+	brew install shfmt || exit 1
+	brew install sqlparse || exit 1
+	brew install shellcheck || exit 1
+	brew install stylua || exit 1
+	brew install hadolint || exit 1
+	pip3 install cmakelang || exit 1
+	npm install -g prettier || exit 1
+	npm install -g lua-fmt || exit 1
+	npm install -g eslint_d || exit 1
+	npm install -g @fsouza/prettierd || exit 1
+	npm install -g @unibeautify/beautifier-sqlformat || exit 1
+	npm install -g stylelint || exit 1
+	gem install rubocop rubocop-rails || exit 1
