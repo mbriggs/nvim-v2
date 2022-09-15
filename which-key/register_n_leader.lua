@@ -55,6 +55,9 @@ local Nmappings = {
 		C = { [[<cmd>Telescope git_bcommits<cr>]], "Buffer Commits" },
 	},
 
+	q = { "<cmd>:qa<cr>", "Quit" },
+	Q = { "<cmd>:qa!<cr>", "Quit without saving" },
+
 	h = { nil },
 	c = { nil },
 
@@ -138,13 +141,6 @@ local Nmappings = {
 		t = { "<cmd>TodoTrouble<cr>", "TODOs" },
 	},
 
-	["q"] = {
-		name = "+Quit",
-		q = { "<cmd>:qa<cr>", "Quit" },
-		c = { "<cmd>:q!<cr>", "Close" },
-		k = { "<cmd>:qa!<cr>", "Quit without saving" },
-		s = { "<cmd>:wa | qa!<cr>", "Quit and save" },
-	},
 	a = {
 		name = "Annotate",
 		["<cr>"] = {
