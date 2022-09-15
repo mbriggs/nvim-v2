@@ -151,6 +151,9 @@ local tools = {
 		requires = "nvim-lua/plenary.nvim",
 	},
 
+	-- diff stuff
+	{ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" },
+
 	-- go tooling
 	{
 		"olexsmir/gopher.nvim",

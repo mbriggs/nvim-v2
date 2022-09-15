@@ -24,6 +24,7 @@ return {
 			},
 			["o"] = { [[<cmd>Neotree reveal<cr>]], "Open Explorer" },
 			["r"] = { [[<cmd>lua require('telescope').extensions.recent_files.pick()<cr>]], "Recent Files" },
+			["R"] = { "<cmd>lua require('spectre').open()<CR>", "Search and Replace" },
 
 			w = {
 				function()
@@ -37,7 +38,8 @@ return {
 			},
 
 			g = {
-				C = { [[<cmd>Telescope git_bcommits<cr>]], "Buffer Commits" },
+				c = { [[<cmd>DiffviewFileHistory %<cr>]], "File Commits" },
+				C = { [[<cmd>DiffviewFileHistory<cr>]], "Branch Commits" },
 				d = { [[<cmd>DiffviewOpen<cr>]], "View git diff" },
 			},
 
@@ -66,7 +68,8 @@ return {
 			},
 
 			["s"] = {
-				s = { "<cmd>lua require('spectre').open()<CR>", "Search and Replace" },
+				g = { [[<cmd>Telescope git_bcommits<cr>]], "Buffer Commits" },
+				G = { [[<cmd>Telescope git_commits<cr>]], "Git Commits" },
 			},
 
 			["t"] = {
