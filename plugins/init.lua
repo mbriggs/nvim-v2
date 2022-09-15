@@ -88,6 +88,12 @@ local fix = {
 		},
 		ft = "qf",
 	},
+
+	{
+		"smartpde/telescope-recent-files",
+		after = "telescope.nvim",
+		config = require("user.plugins.telescope-recent-files"),
+	},
 }
 
 -- LSP --

@@ -37,6 +37,8 @@ local Nmappings = {
 		toggleLines,
 		"Toggle Diagnostics",
 	},
+	["o"] = { [[<cmd>Neotree reveal<cr>]], "Open Explorer" },
+	["r"] = { [[<cmd>lua require('telescope').extensions.recent_files.pick()<cr>]], "Recent Files" },
 
 	w = {
 		function()
