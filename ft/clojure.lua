@@ -7,6 +7,8 @@ require("user.ft_wk")("clojure", {
 	r = { "<cmd>ConjureEvalRootForm<CR>", "Eval Root Form" },
 	w = { "<cmd>ConjureEvalWord<CR>", "Eval Word" },
 
+	C = { "<cmd>ConjureCljConnectPortFile<cr>", "Connect" },
+
 	c = {
 		name = "+Comment",
 		e = { "<cmd>ConjureEvalCommentCurrentForm<CR>", "Eval Current Form As Comment" },
