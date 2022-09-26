@@ -10,6 +10,9 @@ end
 return {
 	n = {
 		["<leader>"] = {
+			[","] = {
+				name = "+Local",
+			},
 			[":"] = { [[<cmd>lua require("user.lsp_fixcurrent")()<cr>]], "QuickFix" },
 			[";"] = { "<cmd>Telescope find_files<cr>", "Files" },
 			["<cr>"] = { [[<cmd>q<cr>]], "Close Window" },
@@ -181,7 +184,7 @@ return {
 				p = { "<cmd>Telescope project<cr>", "Projects" },
 				r = { "<cmd>Telescope registers<cr>", "Registers" },
 				t = { "<cmd>Telescope colorscheme<cr>", "Themes" },
-				w = { "<cmd>Telescope live_grep<cr>", "Words" },
+				w = { "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", "Words" },
 				o = {
 					function()
 						require("telescope.builtin").find_files({ cwd = vim.fn.expand("%:p:h") })

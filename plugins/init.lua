@@ -94,6 +94,11 @@ local fix = {
 		after = "telescope.nvim",
 		config = require("user.plugins.telescope-recent-files"),
 	},
+	{
+		"nvim-telescope/telescope-live-grep-args.nvim",
+		after = "telescope.nvim",
+		config = require("user.plugins.telescope-live-grep"),
+	},
 }
 
 -- LSP --
